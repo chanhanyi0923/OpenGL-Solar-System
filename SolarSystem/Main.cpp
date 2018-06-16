@@ -2,9 +2,10 @@
 #include <iostream>
 
 #include "Application.h"
+#include "Texture.h"
 
 Application *app;
-
+GLuint Texture::count = 0;
 
 int main(int argc, char *argv[])
 {

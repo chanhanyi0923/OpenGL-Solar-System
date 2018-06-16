@@ -26,8 +26,9 @@ private:
 	const GLuint WIDTH = 1280, HEIGHT = 720;
 
 	Star sun;
-	Planet planet_a, planet_b, planet_c;
+	Planet planet_a, planet_b, planet_c, planet_d;
 
+	bool pause;
 	bool pressed[1024];
 	static void mouse_callback(GLFWwindow* window, double x, double y);
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);

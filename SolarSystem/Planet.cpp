@@ -1,8 +1,8 @@
 #include "Planet.h"
 
 
-Planet::Planet(glm::vec3 color, GLfloat radius, GLfloat z_angle, GLfloat speed):
-	Ball(color, radius, z_angle, speed)
+Planet::Planet(GLfloat size, GLfloat radius, GLfloat z_angle, GLfloat speed):
+	Ball(size, radius, z_angle, speed)
 {
 }
 

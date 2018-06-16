@@ -1,8 +1,8 @@
 #include "Star.h"
 
 
-Star::Star(glm::vec3 color):
-	Ball(color, 0, 0, 0)
+Star::Star():
+	Ball(3, 0, 0, 0)
 {
 }
 

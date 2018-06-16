@@ -18,7 +18,7 @@ Camera::Camera(
 	this->yaw = yaw;
 	this->pitch = pitch;
 
-	this->movement_speed = 3.0f; // default value
+	this->movement_speed = 12.0f; // default value
 	this->mouse_sensitivity = 0.25f; // default value
 
 	this->updateVectors();

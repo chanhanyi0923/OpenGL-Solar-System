@@ -4,7 +4,7 @@ class Star :
 	public Ball
 {
 public:
-	Star(glm::vec3 color);
+	Star();
 	virtual ~Star();
 	void init();
 };

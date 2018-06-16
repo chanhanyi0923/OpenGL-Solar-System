@@ -1,8 +1,8 @@
 #include "Ball.h"
 
 
-Ball::Ball(glm::vec3 color, GLfloat radius, GLfloat z_angle, GLfloat speed):
-	sphere(color), radius(radius), z_angle(z_angle), speed(speed)
+Ball::Ball(GLfloat size, GLfloat radius, GLfloat z_angle, GLfloat speed):
+	size(size), radius(radius), z_angle(z_angle), speed(speed)
 {
 }
 
@@ -12,11 +12,31 @@ Ball::~Ball()
 }
 
 
+void Ball::setType(Sphere::Type type)
+{
+	this->sphere.setType(type);
+}
+
+
+void Ball::setColor(glm::vec3 color)
+{
+	this->sphere.setColor(color);
+}
+
+
+void Ball::setTexture(Texture * texture_ptr)
+{
+	this->sphere.setTexture(texture_ptr);
+}
+
+
 void Ball::update(glm::mat4 parent_model = glm::mat4(1.0))
 {
 	const GLfloat eps = 1e-6f;
 	const GLfloat step = 1e-3f;
 	this->model = parent_model;
+
+	this->model = glm::scale(this->model, glm::vec3(this->size, this->size, this->size));
 
 	if (this->z_angle > eps) {
 		this->model = glm::rotate(this->model, this->z_angle, glm::vec3(0.0f, 0.0f, 1.0f));
